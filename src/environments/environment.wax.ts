@@ -34,7 +34,7 @@ export const environment = {
               { name: 'WAX', url: 'https://wax.eosweb.net', active: true }],
        disableNets: false,
        voteDonationAcc: 'cryptolions1',
-       disableVoteDonation: false,
+       disableVoteDonation: true,
        version: '1.0.0',
        producers: 1000,
        social: [

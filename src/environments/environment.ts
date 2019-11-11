@@ -87,7 +87,7 @@ export const environment = {
        nets: [{ name: 'LTN', url: '127.0.0.1:3039', active: true }],
        disableNets: true,
        voteDonationAcc: 'cryptolions1',
-       disableVoteDonation: false,
+       disableVoteDonation: true,
        version: '1.0.0',
        producers: 1000,
        social: [
