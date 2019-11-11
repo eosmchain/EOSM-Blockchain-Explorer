@@ -1,49 +1,40 @@
-const chain = 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906';
+const chain = 'ea666b3d188bdbc8a448d34bca381c8d78abfd1c5e50afbb14d87531f0a443d0';
 export const environment = {
     production: true,
-    appName: 'EOSweb',
+    appName: 'LTNweb',
     network: {
         blockchain: 'eos',
-        host: 'bp.cryptolions.io',
-        port: 443,
-        protocol: 'https',
+        host: 'http://0.0.0.0',
+        port: 8005,
+        protocol: 'http',
         expireInSeconds: 120,
         chainId: chain
     },
     chain: chain,
     Eos: {
-        httpEndpoint: 'https://bp.cryptolions.io',
+        httpEndpoint: 'http://0.0.0.0:8005',
         chainId: chain,
         verbose: false
     },
     frontConfig: {
-       coin: 'EOS',
+       coin: 'LTN',
        bp: 'bp.json',
        tokenContract: 'eosio.token',
-       totalBalance: 'EOS',
-       convertToUSD: true,
+       totalBalance: 'LTN',
+       convertToUSD: false,
        customBalance: false,
        logo: '/assets/images/eosweb.png',
        name: {
-          big: 'eos',
-          small: 'web'
+          big: 'LTN',
+          small: 'lightNet'
        },
-       nets: [{ name: 'Mainnet', url: 'https://eosweb.net', active: true },
-              { name: 'Jungle', url: 'https://jungle.eosweb.net', active: false },
-              { name: 'Europechain', url: 'https://xec.eosweb.net', active: false },
-              { name: 'WAX', url: 'https://wax.eosweb.net', active: false }],
-       disableNets: false,
+       nets: [{ name: 'LTN', url: '127.0.0.1:3039', active: true }],
+       disableNets: true,
        voteDonationAcc: 'eoswebnetbp1',
-       disableVoteDonation: false,
+       disableVoteDonation: true,
        version: '2.2.8',
        producers: 1000,
        social: [
-         { link: 'https://github.com/orange1337/eosweb', icon: 'fa-github' },
-         { link: 'https://www.facebook.com/EOSwebnet-199076424068961', icon: 'fa-facebook' },
-         { link: 'https://www.reddit.com/user/eosweb', icon: 'fa-reddit-alien' },
-         { link: 'https://medium.com/@EoswebN', icon: 'fa-medium' },
-         { link: 'https://twitter.com/EoswebN', icon: 'fa-twitter' },
-         { link: 'https://t.me/eoswebdevchat', icon: 'fa-telegram-plane' }
        ],
        liveTXenable: true
     }
