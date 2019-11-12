@@ -42,7 +42,7 @@ config.telegram = {
 
 // reserve nodes
 config.endpoints = [
-	'http://0.0.0.0:8005'
+	'http://0.0.0.0:8000'
      //'http://bp.cryptolions.io',
      //'https://eos.greymass.com',
      //'https://public.eosinfra.io', 
@@ -64,7 +64,7 @@ config.eosConfig = {
 };
 
 // api url for producers list
-config.customChain = 'http://0.0.0.0:8005';
+config.customChain = 'http://0.0.0.0:8000';
 
 // api url for history
 config.historyChain = 'http://0.0.0.0:8080';
