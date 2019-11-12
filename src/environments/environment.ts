@@ -81,8 +81,8 @@ export const environment = {
        customBalance: false,
        logo: '/assets/images/eosio.png',
        name: {
-          big: 'LTN',
-          small: 'LightNet'
+          big: '',
+          small: ''
        },
        nets: [{ name: 'LTN', url: '127.0.0.1:3039', active: true }],
        disableNets: true,
