@@ -4,7 +4,7 @@ export const environment = {
     appName: 'MIOweb',
     network: {
         blockchain: 'eos',
-        host: 'http://0.0.0.0',
+        host: 'http://88.99.248.77',
         port: 8000,
         protocol: 'http',
         expireInSeconds: 120,
@@ -12,7 +12,7 @@ export const environment = {
     },
     chain: chain,
     Eos: {
-        httpEndpoint: 'http://0.0.0.0:8000',
+        httpEndpoint: 'http://88.99.248.77:8000',
         chainId: chain,
         verbose: false
     },
