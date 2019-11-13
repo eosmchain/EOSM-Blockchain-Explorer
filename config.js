@@ -8,7 +8,7 @@ let config = {};
 config.PROD = false;
 
 config.toInt = 10000;
-config.coin = 'LTN';
+config.coin = 'MIO';
 
 // mongo uri and options
 config.MONGO_URI = process.env.MONGO_URI || 'mongodb://0.0.0.0:27018/EOSweb';
