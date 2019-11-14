@@ -34,9 +34,9 @@ export class RamPageComponent implements OnInit{
       gradient : true,
       showLegend : false,
       showXAxisLabel : false,
-      xAxisLabel : 'EOS',
+      xAxisLabel : 'LTN',
       showYAxisLabel : true,
-      yAxisLabel : 'EOS',
+      yAxisLabel : 'LTN',
       autoScale : true,
       timeline: true,
       fitContainer : true
