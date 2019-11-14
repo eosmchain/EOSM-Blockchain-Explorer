@@ -11,7 +11,7 @@ config.toInt = 10000;
 config.coin = 'LTN';
 
 // mongo uri and options
-config.MONGO_URI = process.env.MONGO_URI || 'mongodb://0.0.0.0:27018/EOSweb';
+config.MONGO_URI = process.env.MONGO_URI || 'mongodb://mongodb:27017/EOSweb';
 config.MONGO_OPTIONS = {
     socketTimeoutMS: 30000,
     keepAlive: true,
@@ -42,7 +42,7 @@ config.telegram = {
 
 // reserve nodes
 config.endpoints = [
-	'http://0.0.0.0:8000'
+	'http://88.99.183.30:8000'
      //'http://bp.cryptolions.io',
      //'https://eos.greymass.com',
      //'https://public.eosinfra.io', 
@@ -64,10 +64,10 @@ config.eosConfig = {
 };
 
 // api url for producers list
-config.customChain = 'http://0.0.0.0:8000';
+config.customChain = 'http://88.99.183.30:8000';
 
 // api url for history
-config.historyChain = 'http://0.0.0.0:8080';
+config.historyChain = 'http://88.99.183.30:8080';
 
 // tokens api
 //config.tokensAPI = 'http://api.light.xeos.me/api/account/eos/';
