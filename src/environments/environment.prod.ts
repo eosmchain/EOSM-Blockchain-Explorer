@@ -28,7 +28,7 @@ export const environment = {
           big: '',
           small: ''
        },
-       nets: [{ name: 'MIO', url: '127.0.0.1:3039', active: true }],
+       nets: [{ name: 'MIO', url: '127.0.0.1:443', active: true }],
        disableNets: true,
        voteDonationAcc: 'eoswebnetbp1',
        disableVoteDonation: true,
