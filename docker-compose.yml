@@ -9,9 +9,9 @@ services:
       - ./mongo:/data/db
     ports:
       - "27018:27017"
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=test123
+        #environment:
+        #- MONGO_INITDB_ROOT_USERNAME=root
+        #- MONGO_INITDB_ROOT_PASSWORD=test123
 
   eosweb:
     build: .
@@ -19,5 +19,4 @@ services:
       - 3039:3039
       - 9615:9615
     restart: always
-    network_mode: "host"
 
