@@ -17,7 +17,7 @@ export class WalletPageComponent implements OnInit {
       to: '',
       amount: '',
       memo: '',
-      symbol: 'MIO'
+      symbol: 'LTN'
   };
   contractMethod = '';
   contractName = 'eosio';
