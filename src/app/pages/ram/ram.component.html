@@ -58,7 +58,7 @@
 
     <div class="col-sm-12" *ngIf="!loginEOSService?.accountName">
       <div class="analytics-header-right">
-        <button mat-raised-button color="primary" class="btn-generate" (click)="loginEOSService.openPopup()">Connect Wallet</button>
+        <button mat-raised-button color="primary" class="btn-generate" (click)="loginEOSService.initScatter()">Connect Wallet</button>
       </div>
     </div>
     <div class="col-sm-12" *ngIf="loginEOSService?.accountName">
