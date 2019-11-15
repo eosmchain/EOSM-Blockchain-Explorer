@@ -1,7 +1,7 @@
 const chain = 'ea666b3d188bdbc8a448d34bca381c8d78abfd1c5e50afbb14d87531f0a443d0';
 export const environment = {
     production: true,
-    appName: 'LTNweb',
+    appName: 'LightNet',
     network: {
         blockchain: 'eos',
         host: 'http://88.99.248.77',
