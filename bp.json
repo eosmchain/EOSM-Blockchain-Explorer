@@ -1,8 +1,8 @@
 {
-	"producer_account_name": "eoswebnetbp1",
-	"producer_public_key": "EOS5sT6mdCkTBLZM8vZnwqmBpA6gjtbdSTEeGL2k26JQFnjaCg6j2",
+	"producer_account_name": "coolproducer",
+	"producer_public_key": "EOS6ek7UoQGd8AZhRymF7PJNHNzRHriN6hav169dBaBSibfiowdQ9",
 	"org": {
-	"candidate_name": "EOSweb",
+	"candidate_name": "coolproducer",
 	"website": "https://eosweb.net/",
 	"code_of_conduct": "",
 	"email": "",
@@ -31,7 +31,7 @@
 },
 "nodes": [{
 		"location": {
-			"name": "EOSweb",
+			"name": "coolproducer",
 			"country": "Finland",
 			"latitude": 60.1708,
 			"longitude": 24.9375
