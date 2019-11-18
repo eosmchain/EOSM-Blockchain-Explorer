@@ -11,7 +11,7 @@ config.toInt = 10000;
 config.coin = 'LTN';
 
 // mongo uri and options
-config.MONGO_URI = process.env.MONGO_URI || 'mongodb://0.0.0.0:27018/EOSweb';
+config.MONGO_URI = process.env.MONGO_URI || 'mongodb://mongodb:27017/EOSweb';
 config.MONGO_OPTIONS = {
     socketTimeoutMS: 30000,
     keepAlive: true,
@@ -31,7 +31,7 @@ config.MAX_TPS_TIME_UPDATE = 5000; // time of break between reload (leave by def
 config.CUSTOM_GLOBA_STATS = false;
 
 // producer json name
-config.producerJSON = 'bp.json';
+//config.producerJSON = 'bp.json';
 
 // telegram alert bot (depreceted)
 config.telegram = {
@@ -92,4 +92,3 @@ config.loggerSlack = {
 };
 
 module.exports = config;
-
