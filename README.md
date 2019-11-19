@@ -1,4 +1,4 @@
-# EOSweb.net - vote for us [https://eosweb.net/vote](https://eosweb.net/vote)
+# LightNet block explorer
 
 [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4
 
@@ -9,9 +9,6 @@
 
 ## docker-compose example
    `docker-compose.example.yml`
-
-## config.js 
-For creating `config.js` file you need to see `config.example.js` (default config)
 
 ## Development server
 
@@ -26,4 +23,3 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-If you have any question, please welcome to our group [EOSweb Dev Chat](https://t.me/eoswebdevchat)
