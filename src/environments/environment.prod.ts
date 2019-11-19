@@ -23,7 +23,7 @@ export const environment = {
        totalBalance: 'LTN',
        convertToUSD: false,
        customBalance: false,
-       logo: '/assets/images/eosweb.png',
+       logo: '/assets/images/ltnweb.png',
        name: {
           big: '',
           small: ''
