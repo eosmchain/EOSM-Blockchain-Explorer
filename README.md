@@ -12,7 +12,6 @@
 Before running docker-compose, please set up node with mongo_db and optional hitstory, history_api plugins enabled.              
 
 ## Config.js set up
-**Node settings**                                                                                                 
 1. To set up eosConfig, you should set up config.endpoints with current blockchain working http endpoints.                                        
 `config.endpoints = ['http://88.99.183.30:8000'];`                                                                                    
 1. Then, you also should provide current blockchain chainId to config.eosConfig.                                                               
