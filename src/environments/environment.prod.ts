@@ -1,10 +1,10 @@
-const chain = 'ea666b3d188bdbc8a448d34bca381c8d78abfd1c5e50afbb14d87531f0a443d0';
+const chain = '702fb553f12132f3854614b2dfc3712d4426a1a99335b17e08a3a8a6c13a9667';
 export const environment = {
     production: true,
     appName: 'LightNet',
     network: {
         blockchain: 'eos',
-        host: 'http://88.99.248.77',
+        host: '88.99.248.77',
         port: 8000,
         protocol: 'http',
         expireInSeconds: 120,
