@@ -8,10 +8,10 @@ let config = {};
 config.PROD = false;
 
 config.toInt = 10000;
-config.coin = 'LTN';
+config.coin = 'MGP';
 
 // mongo uri and options
-config.MONGO_URI = process.env.MONGO_URI || 'mongodb://mongodb:27017/EOSweb';
+config.MONGO_URI = process.env.MONGO_URI || 'mongodb://0.0.0.0:27018/EOSweb';
 config.MONGO_OPTIONS = {
     socketTimeoutMS: 30000,
     keepAlive: true,
@@ -42,7 +42,7 @@ config.telegram = {
 
 // reserve nodes
 config.endpoints = [
-	'http://88.99.183.30:8000'
+	'http://0.0.0.0:8000'
      //'http://bp.cryptolions.io',
      //'https://eos.greymass.com',
      //'https://public.eosinfra.io', 
@@ -51,7 +51,7 @@ config.endpoints = [
 
 // eosjs
 config.eosConfig = {
-  chainId: "ea666b3d188bdbc8a448d34bca381c8d78abfd1c5e50afbb14d87531f0a443d0",
+  chainId: "702fb553f12132f3854614b2dfc3712d4426a1a99335b17e08a3a8a6c13a9667",
   keyProvider: "",
   httpEndpoint: config.endpoints[0],
   expireInSeconds: 60,
@@ -64,10 +64,10 @@ config.eosConfig = {
 };
 
 // api url for producers list
-config.customChain = 'http://88.99.183.30:8000';
+config.customChain = 'http://0.0.0.0:8000';
 
 // api url for history
-config.historyChain = 'http://88.99.183.30:8080';
+config.historyChain = 'http://0.0.0.0:8000';
 
 // tokens api
 //config.tokensAPI = 'http://api.light.xeos.me/api/account/eos/';

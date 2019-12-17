@@ -28,7 +28,7 @@ export class ProducerComponent implements OnInit, OnDestroy{
 
   options = {
     layers: [
-       tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18, attribution: 'LightNet' })
+       tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18, attribution: 'Mango global payment system' })
     ],
     zoom: 1,
     center: latLng(0, 0)

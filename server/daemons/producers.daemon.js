@@ -6,7 +6,7 @@ const { asyncWrapper, asyncForEach } = require('../utils/main.utils');
 const wrapper = new asyncWrapper(log);
 
 const PRODUCERS_LIMITS 	= 500;
-const defaultImg 		= '/assets/images/ltnio.png';
+const defaultImg 		= '/assets/images/MGPio.png';
 const bpsImg 			= '/assets/images/bps/';
 const bpsImgPath 		= path.join(__dirname, '../../dist/assets/images/bps/');
 const sharp 			= require('sharp');
