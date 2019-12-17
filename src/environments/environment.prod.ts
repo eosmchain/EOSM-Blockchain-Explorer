@@ -4,7 +4,7 @@ export const environment = {
     appName: 'Mango global payment system',
     network: {
         blockchain: 'eos',
-        host: 'http://0.0.0.0',
+        host: '88.99.248.77',
         port: 8000,
         protocol: 'http',
         expireInSeconds: 120,

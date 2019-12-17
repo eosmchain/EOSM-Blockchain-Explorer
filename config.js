@@ -67,7 +67,7 @@ config.eosConfig = {
 config.customChain = 'http://0.0.0.0:8000';
 
 // api url for history
-config.historyChain = 'http://0.0.0.0:8000';
+config.historyChain = 'http://88.99.183.30:8000';
 
 // tokens api
 //config.tokensAPI = 'http://api.light.xeos.me/api/account/eos/';
