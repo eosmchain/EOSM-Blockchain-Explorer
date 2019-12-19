@@ -28,7 +28,7 @@ export const environment = {
        totalBalance: 'EOS',
        convertToUSD: true,
        customBalance: false,
-       logo: '/assets/images/MGPweb.png',
+       logo: '/assets/images/mgpweb.png',
        name: {
           big: 'eos',
           small: 'web'
@@ -54,13 +54,13 @@ export const environment = {
     }
 };*/
 
-const chain = '702fb553f12132f3854614b2dfc3712d4426a1a99335b17e08a3a8a6c13a9667';
+const chain = 'd693c8e03737cd117cc54eeb3d33e6c6648484ea9576bc94e623fef27199d5bb';
 export const environment = {
     production: true,
     appName: 'MGP',
     network: {
         blockchain: 'eos',
-        host: 'http://0.0.0.0',
+        host: '202.60.241.144',
         port: 8000,
         protocol: 'http',
         expireInSeconds: 120,
@@ -79,7 +79,7 @@ export const environment = {
        totalBalance: 'MGP',
        convertToUSD: false,
        customBalance: false,
-       logo: '/assets/images/MGPio.png',
+       logo: '/assets/images/mgpio.png',
        name: {
           big: '',
           small: ''
