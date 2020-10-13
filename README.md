@@ -13,10 +13,10 @@ Before running docker-compose, please set up node with mongo_db and optional hit
 
 ## Config.js set up
 1. To set up eosConfig, you should set up config.endpoints with current blockchain working http endpoints.                                        
-`config.endpoints = ['http://88.99.183.30:8000'];`                                                                                    
+`config.endpoints = ['http://expnode.mgpchain.io'];`                                                                                    
 1. Then, you also should provide current blockchain chainId to config.eosConfig.                                                               
 `config.eosConfig = {                          
-  chainId: "ea666b3d188bdbc8a448d34bca381c8d78abfd1c5e50afbb14d87531f0a443d0",                                
+  chainId: "cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f",                                
   keyProvider: "",                             
   httpEndpoint: config.endpoints[0],                           
   expireInSeconds: 60,                                
@@ -29,31 +29,34 @@ Before running docker-compose, please set up node with mongo_db and optional hit
 };`                                   
 1. Optionally, you also can set up api endpoints for producers list and history (history and history_api plugins should be enabled).                    
 **api url for producers list**                                      
-`config.customChain = 'http://88.99.183.30:8000';  `                                                                 
+`config.customChain = 'http://expnode.mgpchain.io';  `                                                                 
 **api url for history**                                                          
-`config.historyChain = 'http://88.99.183.30:8080';  `                   
+`config.historyChain = 'http://expnode.mgpchain.io';  `                   
 
 ## src/environments/environment.prod.ts set up
 1. Set up actual blockchain chain id.                   
-`const chain = 'ea666b3d188bdbc8a448d34bca381c8d78abfd1c5e50afbb14d87531f0a443d0';`                                          
+`const chain = 'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f';`                                          
 1. Set up host, port and actual http node endpoint here.                           
 `network: {                       
         blockchain: 'eos',                    
-        host: 'http://88.99.248.77',                      
-        port: 8000,                            
+        host: 'expnode.mgpchain.io',                      
+        port: 80,                            
         protocol: 'http',                                
         expireInSeconds: 120,                                                 
         chainId: chain                               
     },                                
     chain: chain,                                   
     Eos: {                                
-        httpEndpoint: 'http://88.99.248.77:8000',                        
+        httpEndpoint: 'http://expnode.mgpchain.io',                        
         chainId: chain,                          
         verbose: false                                
     },`               
                                     
 ## docker-compose                                      
-   `docker-compose.example.yml`                            
+   `docker-compose.example.yml`   
+   * First-time
+   ```docker-compose up --build```
+   * Subsequent times                         
    ```docker-compose up```                                             
                                                       
 ## Development server

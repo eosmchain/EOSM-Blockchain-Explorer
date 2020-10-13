@@ -54,21 +54,21 @@ export const environment = {
     }
 };*/
 
-const chain = 'd693c8e03737cd117cc54eeb3d33e6c6648484ea9576bc94e623fef27199d5bb';
+const chain = 'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f';
 export const environment = {
     production: true,
     appName: 'MGP',
     network: {
         blockchain: 'eos',
-        host: '202.60.241.144',
-        port: 8000,
+        host: 'expnode.mgpchain.io',
+        port: 80,
         protocol: 'http',
         expireInSeconds: 120,
         chainId: chain
     },
     chain: chain,
     Eos: {
-        httpEndpoint: 'http://0.0.0.0:8000',
+        httpEndpoint: 'http://expnode.mgpchain.io',
         chainId: chain,
         verbose: false
     },
