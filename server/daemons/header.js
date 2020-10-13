@@ -14,7 +14,8 @@ const mongoose      = require("mongoose");
 mongoose.Promise  	= global.Promise;
 
 const EOS     		= require('eosjs');
-config.eosConfig.httpEndpoint = (config.CRON) ? config.CRON_API : config.eosConfig.httpEndpoint;
+//config.eosConfig.httpEndpoint = (config.CRON) ? config.CRON_API : config.eosConfig.httpEndpoint;
+config.eosConfig.httpEndpoint = config.eosConfig.httpEndpoint;
 const eos     		= EOS(config.eosConfig);
 
 module.exports = (loggerFileName) => {

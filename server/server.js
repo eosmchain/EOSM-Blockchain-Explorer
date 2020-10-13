@@ -78,10 +78,10 @@ server.on('listening', onListening);
 const io  = require('socket.io').listen(server);
 require(`./api/eos.api.${config.apiV}.socket`)(io, mongoMain, metrics);
 
-if (config.CRON){
+if (config.CRON) {
     require('./daemons/init')();
 }
-if (config.telegram.ON){
+if (config.telegram.ON) {
     require('./daemons/ram.bot.daemon')(mongoMain);
 }
 
