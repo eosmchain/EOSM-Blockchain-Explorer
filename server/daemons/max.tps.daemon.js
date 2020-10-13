@@ -53,7 +53,7 @@ async function getBlockRecursive(settings, info, elements){
 	   	maxPerSec += block.transactions.length;
 	}
 	if (counter === 1){
-		console.log(`=== Block ${blockNumber}, Max TPS: ${maxPerSec}, Actions: ${settings.actions}, Accounts: ${settings.accounts}`);
+		//console.log(`=== Block ${blockNumber}, Max TPS: ${maxPerSec}, Actions: ${settings.actions}, Accounts: ${settings.accounts}`);
 		
 		let { trxCounter, actionsCounter, accounts } = getActionsCount(block);
 		currentTrx = trxCounter;
