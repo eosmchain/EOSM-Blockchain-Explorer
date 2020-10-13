@@ -47,7 +47,7 @@ export class MainCustomizeChartsComponent implements OnInit{
   }
 
   getData() {
-        this.http.get(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${this.frontConfig.coin}&tsyms=USD&site=${location.hostname}`)
+        this.http.get(`https://min-api.cryptocompare.com/data/price?fsyms=${this.frontConfig.coin}&tsyms=USD&site=${location.hostname}`)
                   .subscribe(
                       (res: any) => {
                            this.currencyObj = res;
