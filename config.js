@@ -42,7 +42,7 @@ config.telegram = {
 
 // reserve nodes
 config.endpoints = [
-	'http://116.206.100.95:8000'
+	'http://expnode.mgpchain.io'
      //'http://bp.cryptolions.io',
      //'https://eos.greymass.com',
      //'https://public.eosinfra.io', 
@@ -51,7 +51,7 @@ config.endpoints = [
 
 // eosjs
 config.eosConfig = {
-  chainId: "d693c8e03737cd117cc54eeb3d33e6c6648484ea9576bc94e623fef27199d5bb",
+  chainId: "cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f",
   keyProvider: "",
   httpEndpoint: config.endpoints[0],
   expireInSeconds: 60,
@@ -64,10 +64,10 @@ config.eosConfig = {
 };
 
 // api url for producers list
-config.customChain = 'http://116.206.100.95:8000';
+config.customChain = 'http://expnode.mgpchain.io';
 
 // api url for history
-config.historyChain = 'http://116.206.100.95:8000';
+config.historyChain = 'http://expnode.mgpchain.io';
 
 // tokens api
 //config.tokensAPI = 'http://api.light.xeos.me/api/account/eos/';
