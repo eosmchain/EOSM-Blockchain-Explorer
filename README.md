@@ -53,7 +53,10 @@ Before running docker-compose, please set up node with mongo_db and optional hit
     },`               
                                     
 ## docker-compose                                      
-   `docker-compose.example.yml`                            
+   `docker-compose.example.yml`   
+   * First-time
+   ```docker-compose up --build```
+   * Subsequent times                         
    ```docker-compose up```                                             
                                                       
 ## Development server
