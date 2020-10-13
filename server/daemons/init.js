@@ -31,7 +31,7 @@ module.exports = () => {
         
         startProducersInfoDaemon();
 
-        if (!config.CUSTOM_GLOBA_STATS){
+        if (!config.CUSTOM_GLOBA_STATS) {
             startAccountsDaemon();
             startGlobalStatAnalytics();
 
@@ -55,6 +55,7 @@ module.exports = () => {
 }
 
 function startTPSdaemon(){
+        console.log('\x1b[36m%s\x1b[0m' ,'====== Process TPS daemon starts');
         let forkProcess = fork(path.join(__dirname, '../daemons/max.tps.daemon.js'));
         forkProcess.on('close', () => {
               console.log('\x1b[33m%s\x1b[0m', '====== Process TPS close Error');
@@ -64,6 +65,7 @@ function startTPSdaemon(){
 
 function startProducersInfoDaemon(){
         PRODUCERS_PROCESS += 1;
+        console.log('\x1b[36m%s\x1b[0m' ,'====== Process PRODUCERS daemon starts');
         let forkProcess = fork(path.join(__dirname, '../daemons/producers.daemon.js'));
         forkProcess.on('close', res => {
               console.log('\x1b[36m%s\x1b[0m', '====== Process PRODUCERS daemon end');
@@ -73,6 +75,8 @@ function startProducersInfoDaemon(){
 
 function startAccountsDaemon(){
         ACCOUNTS_PROCESS += 1;
+        
+        console.log('\x1b[36m%s\x1b[0m' ,'====== Process ACCOUNTS daemon starts');
         let forkProcess = fork(path.join(__dirname, '../daemons/accounts.daemon.js'));
         forkProcess.on('close', res => {
               console.log('\x1b[36m%s\x1b[0m', '====== Process ACCOUNTS daemon end');
@@ -82,6 +86,8 @@ function startAccountsDaemon(){
 
 function startAccountsAnalytics(){
         ACCOUNTS_STAT_PROCESS += 1;
+
+        console.log('\x1b[36m%s\x1b[0m' ,'====== Process ANALYTICS daemon starts');
         let forkProcess = fork(path.join(__dirname, '../daemons/accounts.analytics.daemon.js'));
         forkProcess.on('close', res => {
               console.log('\x1b[36m%s\x1b[0m' ,'====== Process ANALYTICS daemon end');
@@ -91,6 +97,7 @@ function startAccountsAnalytics(){
 
 function startGlobalStatAnalytics(){
         NEW_GLOBAL_STAT_PROCESS += 1;
+
         let forkProcess = fork(path.join(__dirname, '../daemons/global.daemon.js'));
         forkProcess.on('close', res => {
               console.log('\x1b[36m%s\x1b[0m', '====== Process NEW GLOBAL STAT daemon end');

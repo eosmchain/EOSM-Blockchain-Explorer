@@ -86,7 +86,8 @@ async function getBlockRecursive(settings, info, elements){
 
 		previousTrxTime = +new Date(block.timestamp);
 	}
-	if (config.CUSTOM_GLOBA_STATS){
+	
+	if (config.CUSTOM_GLOBA_STATS) {
 		settings.actions += actCounter;
 		if (newAccounts.length){
 			settings.accounts += newAccounts.length;
