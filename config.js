@@ -42,7 +42,7 @@ config.telegram = {
 
 // reserve nodes
 config.endpoints = [
-	'http://expnode.mgpchain.io'
+	'http://172.17.0.1:8888'
      //'http://bp.cryptolions.io',
      //'https://eos.greymass.com',
      //'https://public.eosinfra.io', 
@@ -64,10 +64,10 @@ config.eosConfig = {
 };
 
 // api url for producers list
-config.customChain = 'http://expnode.mgpchain.io';
+config.customChain = 'http://172.17.0.1:8888';
 
 // api url for history
-config.historyChain = 'http://expnode.mgpchain.io';
+config.historyChain = 'http://172.17.0.1:8888';
 
 // tokens api
 //config.tokensAPI = 'http://api.light.xeos.me/api/account/eos/';

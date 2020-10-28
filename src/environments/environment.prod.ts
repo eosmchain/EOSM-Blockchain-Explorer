@@ -1,18 +1,18 @@
 const chain = 'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f';
 export const environment = {
     production: true,
-    appName: 'Mango global payment system',
+    appName: 'Mango Global Payment Blockchain System',
     network: {
         blockchain: 'eos',
-        host: 'expnode.mgpchain.io',
-        port: 80,
+        host: '172.17.0.1',
+        port: 8888,
         protocol: 'http',
         expireInSeconds: 120,
         chainId: chain
     },
     chain: chain,
     Eos: {
-        httpEndpoint: 'http://expnode.mgpchain.io',
+        httpEndpoint: 'https://scan.mgpchain.io/node',
         chainId: chain,
         verbose: false
     },
