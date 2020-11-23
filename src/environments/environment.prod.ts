@@ -12,7 +12,7 @@ export const environment = {
     },
     chain: chain,
     Eos: {
-        httpEndpoint: 'https://scan.mgpchain.io',
+        httpEndpoint: 'https://exp.mgpchain.io',
         chainId: chain,
         verbose: false
     },

@@ -9,6 +9,7 @@ ENV CONFIG_NET=${CONFIG_NET}
 WORKDIR /home/eosweb
 COPY . /home/eosweb
 
+RUN npm update
 RUN npm install -g pm2@2.10.4
 RUN npm install -g @angular/cli@7.1.4
 RUN cd /home/eosweb && npm install
