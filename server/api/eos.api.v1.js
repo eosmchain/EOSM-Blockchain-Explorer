@@ -175,16 +175,22 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 	router.get('/api/v1/get_accounts_analytics/:offset', (req, res) => {
 		 console.log("get_accounts_analytics invoked");
 
-		 STATS_ACCOUNT.find()
-	   	 		.sort({ balance_eos: -1 })
-	   	 		.limit(Number(req.params.offset))
-	   	 		.exec((err, result) => {
-	   	 		if (err){
-	   	 			log.error(err);
-	   	 			return res.status(500).end();
-	   	 		}
-	   	 		res.json(result);
-	   	 });
+
+     request.get({url:`https://scan.mgpchain.io/api/v1/get_accounts_analytics/50`}).pipe(res);
+
+
+
+		// STATS_ACCOUNT.find()
+	   	 		//.sort({ balance_eos: -1 })
+	   	 		//.limit(Number(req.params.offset))
+	   	 		//.exec((err, result) => {
+	   	 		//if (err){
+	   	 			//log.error(err);
+	   	 			//return res.status(500).end();
+	   	 		//}
+
+	   	 		//res.json(result);
+	   	 //});
 	});
 
 	/*
@@ -193,9 +199,9 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 	*/
 	router.post('/api/v1/get_chart_ram', async (req, res) => {
 	   	let result;
-	   	let interval 	= 3; // mins. 
+	   	let interval 	= 3; // mins.
 	   	let dateFrom 	= (req.body.from === 0) ? 0 : +new Date(req.body.from);
-	   	let week 		= +new Date() - 8 * 7 * 24 * 3600000; 
+	   	let week 		= +new Date() - 8 * 7 * 24 * 3600000;
 	   	let month 		= +new Date() - 32 * 7 * 24 * 3600000;
 	   	let match 		= (dateFrom === 0) ? {} : { date : { $gte: new Date(dateFrom) } };
 
@@ -220,7 +226,7 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
   			}},
   			{ $sort: { _id: 1 } }
 	   	];
-	   	
+
 	   	try {
 	   		result = await RAM.aggregate(query);
 	   	} catch (err){
@@ -300,8 +306,8 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 	* params - account name
 	*/
 	router.get('/api/v1/get_code/:account', (req, res) => {
-	   	 	let data =  { 
-				account_name: req.params.account 
+	   	 	let data =  {
+				account_name: req.params.account
 			};
 	   	 	request.post({url: `${config.customChain}/v1/chain/get_abi`, json: data }).pipe(res);
 	});
@@ -311,8 +317,8 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 	* params - account name
 	*/
 	router.get('/api/v1/get_raw_code_and_abi/:account', (req, res) => {
-			let data =  { 
-				account_name: req.params.account 
+			let data =  {
+				account_name: req.params.account
 			};
 	   	 	request.post({url: `${config.customChain}/v1/chain/get_raw_code_and_abi`, json: data }).pipe(res);
 	});
@@ -418,7 +424,7 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 	   	let	sort = (req.query.sort) ? queryString += `&sort=${req.query.sort}` : queryString;
 	   	request.get(`${config.historyChain}/v1/history/get_voters/${accountName}${queryString}`).pipe(res);
 	});
-	
+
 	/*
 	* router - get_transaction
 	* params - transaction_id_type
@@ -473,6 +479,7 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 	* router - get_info
 	*/
 	router.get('/api/v1/get_info', (req, res) => {
+      console.log(req);
 	   	 global.eos.getInfo({})
 	   	 	.then(result => {
 	   	 		res.json(result);
@@ -545,29 +552,5 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 	});
 	//============ END of Account API
 
-// ============== end of exports 
+// ============== end of exports
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
