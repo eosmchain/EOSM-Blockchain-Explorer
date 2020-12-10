@@ -45,6 +45,7 @@ export class AnalyticsPageComponent implements OnInit{
 
 
   constructor(private route: ActivatedRoute, protected http: HttpClient){}
+  
 
   getAccounts(){
       this.spinner = true;
@@ -115,7 +116,7 @@ export class AnalyticsPageComponent implements OnInit{
             return;
         }
         let result = data.map(elem => {
-          
+
              return { name: elem.account_name, value: Math.floor(elem.unstaked) };
         });
         result.shift();
