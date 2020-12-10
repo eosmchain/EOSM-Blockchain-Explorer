@@ -177,7 +177,8 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 
 
      request.get({url:`https://scan.mgpchain.io/api/v1/get_accounts_analytics/50`}).pipe(res);
-     
+
+
 
 
 
