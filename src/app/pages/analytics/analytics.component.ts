@@ -45,11 +45,11 @@ export class AnalyticsPageComponent implements OnInit{
 
 
   constructor(private route: ActivatedRoute, protected http: HttpClient){}
-  
+
 
   getAccounts(){
       this.spinner = true;
-  		this.http.get(`/api/v1/get_accounts_analytics/200`)
+  		this.http.get(`/api/v1/get_accounts_analytics/50`)
   				 .subscribe(
                       (res: any) => {
 
@@ -59,9 +59,13 @@ export class AnalyticsPageComponent implements OnInit{
 
 
                           this.pieChart = this.createPieChart(this.mainData);
-
                           let ELEMENT_DATA: Element[] = this.mainData;
+
+
+
                           this.dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
+
+
 
                           this.spinner = false;
                       },
@@ -119,7 +123,7 @@ export class AnalyticsPageComponent implements OnInit{
 
              return { name: elem.account_name, value: Math.floor(elem.unstaked) };
         });
-        result.shift();
+        //result.shift();
         return result;
   }
 
