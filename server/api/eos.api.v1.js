@@ -175,26 +175,17 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 	router.get('/api/v1/get_accounts_analytics/:offset', (req, res) => {
 		 console.log("get_accounts_analytics invoked");
 
+		 STATS_ACCOUNT.find()
+	   	 		.sort({ balance_eos: -1 })
+	   	 		.limit(Number(req.params.offset))
+	   	 		.exec((err, result) => {
+	   	 		if (err){
+	   	 			log.error(err);
+	   	 			return res.status(500).end();
+	   	 		}
 
-     request.get({url:`https://scan.mgpchain.io/api/v1/get_accounts_analytics/50`}).pipe(res);
-
-
-
-
-
-
-
-		// STATS_ACCOUNT.find()
-	   	 		//.sort({ balance_eos: -1 })
-	   	 		//.limit(Number(req.params.offset))
-	   	 		//.exec((err, result) => {
-	   	 		//if (err){
-	   	 			//log.error(err);
-	   	 			//return res.status(500).end();
-	   	 		//}
-
-	   	 		//res.json(result);
-	   	 //});
+	   	 		res.json(result);
+	   	 });
 	});
 
 	/*
