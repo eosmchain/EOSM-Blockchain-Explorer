@@ -8,6 +8,10 @@ import { Socket } from 'ng-socket-io';
 import { NotificationsService } from 'angular2-notifications';
 import { environment } from '../../../environments/environment';
 
+
+
+
+
 @Component({
   selector: 'analytics-page',
   templateUrl: './analytics.component.html',
@@ -49,7 +53,7 @@ export class AnalyticsPageComponent implements OnInit{
 
   getAccounts(){
       this.spinner = true;
-  		this.http.get(`/api/v1/get_accounts_analytics/50`)
+  		this.http.get(`https://scan.mgpchain.io/api/v1/get_accounts_analytics/50`)
   				 .subscribe(
                       (res: any) => {
 
