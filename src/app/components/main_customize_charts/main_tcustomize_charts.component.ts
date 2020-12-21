@@ -28,7 +28,7 @@ export class MainCustomizeChartsComponent implements OnInit{
       showYAxisLabel : false,
       yAxisLabel : 'Population',
       autoScale : true,
-  }; 
+  };
   curve = shape.curveCardinal;
   blockchainData;
   aggragationData;
@@ -41,8 +41,8 @@ export class MainCustomizeChartsComponent implements OnInit{
   actionsTransactions;
   frontConfig = environment.frontConfig;
 
-  constructor(private http: HttpClient, 
-              private socket: Socket, 
+  constructor(private http: HttpClient,
+              private socket: Socket,
               public mainService: MainService){
   }
 
@@ -85,10 +85,12 @@ export class MainCustomizeChartsComponent implements OnInit{
   }
 
   getAggregationData(){
-        this.http.get('/api/v1/get_aggregation_stat')
+        //this.http.get('/api/v1/get_aggregation_stat')
+        this.http.get('https://scan.mgpchain.io/api/wallet/count')
                   .subscribe(
                       (res: any) => {
-                           this.aggragationData = res;
+
+                           this.aggragationData = res.data;
                       },
                       (error) => {
                           console.error(error);
@@ -179,8 +181,9 @@ export class MainCustomizeChartsComponent implements OnInit{
           }
       });
 
-      this.socket.on('get_aggregation', res => {
-          this.aggragationData = res;
-      });
+      //this.socket.on('get_aggregation', res => {
+          //this.aggragationData = res;
+
+      //});
   }
 }
