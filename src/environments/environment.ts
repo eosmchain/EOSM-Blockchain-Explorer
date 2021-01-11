@@ -60,15 +60,15 @@ export const environment = {
     appName: 'MGP',
     network: {
         blockchain: 'eos',
-        host: 'expnode.mgpchain.io',
-        port: 80,
+        host: 'sh-expnode.vm.mgps.me',
+        port: 8888,
         protocol: 'http',
         expireInSeconds: 120,
         chainId: chain
     },
     chain: chain,
     Eos: {
-        httpEndpoint: 'http://expnode.mgpchain.io',
+        httpEndpoint: 'http://sh-expnode.vm.mgps.me:8888',
         chainId: chain,
         verbose: false
     },

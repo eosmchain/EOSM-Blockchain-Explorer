@@ -85,8 +85,7 @@ export class MainCustomizeChartsComponent implements OnInit{
   }
 
   getAggregationData(){
-        //this.http.get('/api/v1/get_aggregation_stat')
-        this.http.get('https://scan.mgpchain.io/api/wallet/count')
+        this.http.get('/api/v1/get_aggregation_stat')
                   .subscribe(
                       (res: any) => {
 
@@ -181,10 +180,9 @@ export class MainCustomizeChartsComponent implements OnInit{
           }
       });
 
-      //this.socket.on('get_aggregation', res => {
-          //this.aggragationData = res;
+      this.socket.on('get_aggregation', res => {
+          this.aggragationData = res;
 
-      //});
+      });
   }
 }
-

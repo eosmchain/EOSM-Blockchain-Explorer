@@ -53,13 +53,13 @@ export class AnalyticsPageComponent implements OnInit{
 
   getAccounts(){
       this.spinner = true;
-  		this.http.get(`https://scan.mgpchain.io/api/v1/get_accounts_analytics/50`)
+  		this.http.get(`/api/v1/get_accounts_analytics/50`)
   				 .subscribe(
                       (res: any) => {
 
 
 
-                          this.mainData = res.data;
+                          this.mainData = res;
 
 
                           this.pieChart = this.createPieChart(this.mainData);

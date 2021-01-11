@@ -176,7 +176,7 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 		 console.log("get_accounts_analytics invoked");
 
 		 STATS_ACCOUNT.find()
-	   	 		.sort({ balance_eos: -1 })
+	   	 		.sort({ unstaked: -1 })
 	   	 		.limit(Number(req.params.offset))
 	   	 		.exec((err, result) => {
 	   	 		if (err){
