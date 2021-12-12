@@ -43,7 +43,7 @@ config.telegram = {
 // reserve nodes
 config.endpoints = [
 //	'http://sh-exp.vmi.mgps.me:8888'
-	'http://sh-expnode.vm.mgps.me:8888'
+	'https://sh-expnode.vm.mgps.me:8888'
      //'http://bp.cryptolions.io',
      //'https://eos.greymass.com',
      //'https://public.eosinfra.io', 
