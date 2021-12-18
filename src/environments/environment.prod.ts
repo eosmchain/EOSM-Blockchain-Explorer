@@ -12,7 +12,7 @@ export const environment = {
     },
     chain: chain,
     Eos: {
-        httpEndpoint: 'http://sh-expnode.vm.mgps.me:8888',
+        httpEndpoint: 'https://sh-expnode.vm.mgps.me:8888',
         chainId: chain,
         verbose: false
     },
